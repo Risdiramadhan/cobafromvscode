@@ -10,7 +10,7 @@ def test_login_dashboard():
 
     response = requests.post(endpoint_login,data=params,headers={'Content-Type':'application/x-www-form-urlencoded'})
     token = response.headers["Authorization"]
-    assert response.status_code == 200
+    assert response.status_code == 300
     return token
 
 def test_get_login():
